@@ -7,10 +7,15 @@
 .total {
 	font-weight:bold;
 }
+
+/* Sugerencia claudia: todas las cifras alineadas a la derecha
+ * para más fácil legibilidad:
+ */
 .money {
 
 	text-align:right;
 }
+
 h1, th, td {
 	font-family:helvetica;
 }
@@ -26,7 +31,12 @@ h1, th, td {
 <h1>Flujo de Caja Proyectado</h1>
 <?php
 $saldo_inicial = 3000;
-
+/*
+ * formatear como dinero:
+ * se utiliza para mostrar las cifras con separadores de mil
+ * por ejemplo 12345 se convierte en 12.345
+ * adicionalmente entrega html en rojo si el valor es negativo.
+ * */
 function format_as_money($num){
 	$fnum = number_format($num,0,",",",");
 	if($num < 0){
@@ -40,6 +50,10 @@ function format_as_money($num){
 $fsaldo_inicial = format_as_money($saldo_inicial);
 echo("<h2>Saldo Inicial:$fsaldo_inicial</h2>");
 
+// TODO: Traer desde la base de datos
+// TODO: permitir al usuario editar la información
+
+// Trasacciones programadas, suceden una sola vez
 $programadas = array(
 	array('fecha'=>'2018-01-01','valor'=>100,"concepto"=>"Ingresos"),
 	array('fecha'=>'2018-01-01','valor'=>1000,"concepto"=>"Ventas producto"),
@@ -56,12 +70,16 @@ $programadas = array(
 	array('fecha'=>'2018-05-14','valor'=>-5000,"concepto"=>"compra equipos"),
 	array('fecha'=>'2018-06-17','valor'=>-800,"concepto"=>"reparacion equipos"),
 );
+//Transacciones recurrentes, suceden todos los meses:
 $recurrentes = array(
 	array('dia'=>'1','valor'=>-15,"concepto"=>"Agua"),
 	array('dia'=>'5','valor'=>-50,"concepto"=>"Arriendo"),
 	array('dia'=>'15','valor'=>-40,"concepto"=>"Tarjeta de Crédito"),
 );
-
+/** 
+ * agrega ceros a la izquierda, por ejemplo:
+ * el valor 1 se convierte en 01
+ * */
 function zero_pad($p,$pl){
 	if(strlen("".$p)<$pl){
 		return "0".$p;
@@ -69,7 +87,14 @@ function zero_pad($p,$pl){
 		return $p;
 	}
 }
+
 //genera transacciones:
+/*
+ * Simula las transacciones de 6 meses
+ * basándose en que todos los meses se genera
+ * un gasto fijo mensual de ciertas transacciones 
+ * en días específicos del mes.
+ * */
 for($mes=1;$mes<=6;$mes++){
 	foreach($recurrentes as $r){
 		$valor = $r["valor"];
@@ -84,6 +109,9 @@ for($mes=1;$mes<=6;$mes++){
 		);
 	}
 }
+/** función para ordenar transacciones por fecha
+ * es un insumo para usort.
+ * */
 function cmp($a, $b)
 {
     if ($a["fecha"] == $b["fecha"]) {
@@ -92,11 +120,13 @@ function cmp($a, $b)
     return ($a["fecha"] < $b["fecha"]) ? -1 : 1;
 }
 
+//ordenar cronologicamente las transacciones:
 usort($programadas, "cmp");
 
 
-//sumar
-$br = "<br/>";
+// Imprimir la tabla de resultados:
+
+
 $saldo = $saldo_inicial;
 echo("<table border=1 cellspacing=0 cellpadding=3 class=output>");
 echo("<tr>
@@ -109,15 +139,23 @@ echo("<tr>
 		
 		");
 
-$consecutivo = 1;
-$suma_debe = 0;
-$suma_haber = 0;
+$consecutivo = 1; // Informativo
+$suma_debe = 0; // Suma todos los ingresos
+$suma_haber = 0; // Suma los egresos
+
 foreach($programadas as $tx){
 	$valor = $tx["valor"];
+	//Modificación de saldo:
 	$saldo += $valor;
+
+	// formatear los datos de salida con separador de mil:
 	$fvalor = format_as_money($valor);
 	$fsaldo = format_as_money($saldo);
 
+	// En caso de ser transacción con un valor
+	// positivo (ingreso)
+	// se agrega al Haber, en caso de ser
+	// un egreso, se agrega el Debe
 	if($valor > 0){
 		$suma_debe += $valor;	
 		$debe = $fvalor;
@@ -137,6 +175,9 @@ foreach($programadas as $tx){
 	}
 	 */
 	// style='background-color:$clr'
+
+	//Imprime registro con los resultados formateados
+	//class money alínea a la derecha las cifras
 	echo("
 		<tr >
 			<td>$consecutivo</td>
@@ -148,7 +189,7 @@ foreach($programadas as $tx){
 		</tr>\n");
 	$consecutivo += 1;
 }
-
+// Imprime registro final con totales (sugerencia manolo)
 
 $fsuma_debe = format_as_money($suma_debe);
 $fsuma_haber = format_as_money($suma_haber);
@@ -163,5 +204,6 @@ echo("
 	</tr>\n");
 
 echo("</table>");
+
 ?>
 </body></html>
