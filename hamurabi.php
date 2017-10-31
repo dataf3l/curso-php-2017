@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 .total {
@@ -95,19 +96,34 @@ function zero_pad($p,$pl){
  * un gasto fijo mensual de ciertas transacciones 
  * en días específicos del mes.
  * */
-for($mes=1;$mes<=6;$mes++){
+$fini = date("Y-m-01");
+print($fini);
+$cfecha = date_create($fini);
+$dias = array(0,31,28,31,30,31,30,31,31,30,31,30,31);
+
+for($mes=0;$mes<=24;$mes++){
+	$m = $dias[(int)date_format($cfecha,"m")];
+	#echo($m."<br/>");
+	$cfecha = date_add($cfecha, date_interval_create_from_date_string($m.' days'));
+	#echo date_format($cfecha, 'Y-m-d')."<br/>";
+	
 	foreach($recurrentes as $r){
 		$valor = $r["valor"];
 		$concepto = $r["concepto"];
 		$fdia = zero_pad($r["dia"],2);
 		$fmes = zero_pad($mes,2);
-		$fecha = "2018-$fmes-$fdia";
+
+		$fecha_obj = date_add($cfecha, date_interval_create_from_date_string($r["dia"].' days'));
+		$fecha = date_format($fecha_obj, 'Y-m-d');
+		#$fecha = "2018-$fmes-$fdia";
 		$programadas[]=array(
 			"fecha"=>$fecha,
 			"valor"=>$valor,
 			"concepto"=>$concepto,
 		);
 	}
+	
+	
 }
 /** función para ordenar transacciones por fecha
  * es un insumo para usort.
@@ -130,14 +146,14 @@ usort($programadas, "cmp");
 $saldo = $saldo_inicial;
 echo("<table border=1 cellspacing=0 cellpadding=3 class=output>");
 echo("<tr>
-		<th>Consecutivo</th>
+		<th>#</th>
 		<th>Fecha</th>
 		<th>Concepto</th>
 		<th>Debe</th>
 		<th>Haber</th>
 		<th>Saldo</th>
-		
-		");
+	</tr>
+	");
 
 $consecutivo = 1; // Informativo
 $suma_debe = 0; // Suma todos los ingresos
