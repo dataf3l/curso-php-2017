@@ -1,0 +1,21 @@
+cómo recibir valores de un usuario en php
+cual es la diferencia entre GET y POST
+cómo conectarse a una base de datos en php
+qué es sql
+como crear una base de datos
+cómo crear una tabla
+qué tipos de datos existen en mysql
+como se guarda la informacion financiera en mysql
+que es un crud
+cómo se hacer un guestbook en php que use una base de datos
+	qué es un guestbook
+cómo crear registros de una base de datos en php
+cómo se muestra la información guardada en una base de datos
+cómo se actualiza un registro de una base de datos en php
+cómo se borran registros de una base de datos en php
+cómo se hacen formularios de consulta en php
+cómo se hace un backup de una base de datos en mysql
+qué es un id auto-incremental
+qué es inyección de SQL
+qué es un join en el contexto de SQL
+qué es nulo en el contexto de sql
