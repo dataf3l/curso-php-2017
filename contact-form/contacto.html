@@ -1,0 +1,53 @@
+
+<html>
+    <head>
+        <style>
+            .formulario{
+                font-family: helvetica, sans-serif;
+                margin: 100px;
+                border: 2px dotted black;
+                background-color: #eeeeee;
+                padding: 20px;
+                
+            }
+            .formulario input, .formulario select, .formulario textarea{
+                width: 100%;
+            }
+            small{
+                color: #aaaaaa;
+            }
+        </style>
+        <meta http-equiv="Content Type" content="text/html; charset-utf-8"/>
+    </head>
+    <body>
+    
+    <div class="formulario"> 
+        <center><h1> Cont&aacute;ctenos</h1></center>
+        <form action="mail.php" method="POST">
+            <div>   
+                <p>Su nombre <small>(Obligatorio):</small><br> 
+                    <input type="text" name="nombre" required /></p>
+               
+                <p>E-mail <small>(Obligatorio):</small><br>
+                        <input type="email" name="email" required /></p>
+                
+                <p>Área a la que va destinado su mensaje:<br>
+                    <select name="area">
+                        <option value="administrativa">Administrativa</option>
+                        <option value="compras">Compras</option>
+                        <option value="gerencia">Gerencia</option>
+                    </select>  
+                
+                </p>
+               
+                <p>Notas <small>(Obligatorio):</small> <br>
+                    <textarea name="notas" rows="4" required>   </textarea>
+                        </p>
+                        <p>Desea recibir copia de este mensaje? 
+                            <input type="checkbox" name="copia" value=1 checked /> 
+                <p><input type="submit" value="Enviar"/></p>
+            </div> 
+        </form>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+
+1. contacto.html: muestra un form de contacto con los siguientes campos:
+
+- Nombre
+- Email
+- Area
+- - Administrativa
+- - Comercial
+- - Compras
+- Notas
+- Enviar
+
+2. Base de datos MYSQL:
+contactos
+usuario: contacto
+password: contacto90210$$$
+tabla: 
+
+	prospecto
+	-Nombre
+	-Email
+	-Area
+	-Notas
+	-fecha_contacto
+
+3. programa enviar_email.php:
+   $_POST
+	-nombre
+	-email
+	-area
+	-notas
+  enviar un email a contacto@empresa.com con los dato que ingresó el usuario
+  envia un email a el cliente, informando que se recibió la solicitud.
+
+  url
+  <?php
+
+  $_POST = $_GET;
+  
+
+  llama: guardar.php
+
+4. guardar.php
+  inserta un registro en la base de datos de prospectos
+	-Nombre
+	-Email
+	-Area
+	-Notas
+        -fecha de hoy, hora actual
+
+
+
