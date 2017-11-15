@@ -1,0 +1,148 @@
+
+SQL básico
+
+Pregunta 1:
+
+¿Cuál de las siguientes no es una función de agregación?
+
+ a) COUNT() 
+
+ b) LIMIT() 
+
+ c) MAX() 
+
+ d) MIN() 
+
+Pregunta 2:
+
+En una cláusula LIKE, ¿cómo se obtienen todos los nombres de personas que comienzan con "Juan"?
+
+ a) LIKE "Juan%" 
+
+ b) LIKE "Juan*" 
+
+ c) LIKE "Juan$" 
+
+ d) LIKE "Juan&" 
+
+Pregunta 3:
+
+¿Cuál de las siguientes no es una función de agregación?
+
+ a) AVG() 
+
+ b) FLOOR() 
+
+ c) SUM() 
+
+ d) Las anteriores respuestas no son correctas 
+
+Pregunta 4:
+
+En SQL, para ordenar los datos devueltos por una sentencia SELECT se emplea la cláusula
+
+ a) ORDER BY 
+
+ b) ORDERED BY 
+
+ c) SORT BY 
+
+ d) SORTED BY 
+
+Pregunta 5:
+
+En SQL, para eliminar las filas duplicadas del resultado de una sentencia SELECT se emplea
+
+ a) NO DUPLICATE 
+
+ b) UNIQUE 
+
+ c) DISTINCT 
+
+ d) Las anteriores respuestas no son correctas 
+
+Pregunta 6:
+
+¿Cómo se borra toda una base de datos con SQL?
+
+ a) DELETE DATABASE 
+
+ b) DROP DATABASE 
+
+ c) ERASE DATABASE 
+
+ d) Las anteriores respuestas no son correctas 
+
+Pregunta 7:
+
+En SQL, ¿cuál de estas sentencias añade una fila a una tabla en una base de datos?
+
+ a) ADD 
+
+ b) INSERT 
+
+ c) UPDATE 
+
+ d) INCLUDE 
+
+Pregunta 8:
+
+En SQL, para modificar la estructura de una tabla de una base de datos se emplea la instrucción
+
+ a) ALTER TABLE 
+
+ b) CHANGE TABLE 
+
+ c) MODIFY TABLE 
+
+ d) Las anteriores respuestas no son correctas 
+
+Pregunta 9:
+
+¿En cuál de las siguientes sentencias del lenguaje SQL se emplea la cláusula SET?
+
+ a) DELETE 
+
+ b) DROP 
+
+ c) SELECT 
+
+ d) UPDATE 
+
+Pregunta 10:
+
+En una cláusula LIKE, ¿cómo se obtienen todos los nombres de personas que tienen exactamente cuatro caracteres?
+
+ a) LIKE "????" 
+
+ b) LIKE "____" 
+
+ c) LIKE "...." 
+
+ d) Las anteriores respuestas no son correctas 
+
+Pregunta 11:
+
+Una sentencia SELECT sin la cláusula WHERE devuelve
+
+ a) Todos los registros existentes en la tabla que no estén relacionados con otra tabla 
+
+ b) Todos los registros existentes en la tabla 
+
+ c) No se puede ejecutar una sentencia SELECT sin la cláusula WHERE 
+
+ d) Las anteriores respuestas no son correctas 
+
+Pregunta 12:
+
+¿Qué instrucción se emplea para eliminar todo el contenido de una tabla, pero conservando la tabla?
+
+ a) DELETE TABLE 
+
+ b) DROP TABLE 
+
+ c) TRUNCATE TABLE 
+
+ d) Las anteriores respuestas no son correctas 
+
+
