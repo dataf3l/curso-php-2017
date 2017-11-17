@@ -14,7 +14,7 @@ $opt = [
 $pdo = new PDO($dsn, $user, $pass, $opt);
 
 
-$f = file("./input.csv");
+$f = file("./input2.csv");
 foreach($f as $line){
 	$row = str_getcsv($line,";");
 
