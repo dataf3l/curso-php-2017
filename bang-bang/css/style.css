@@ -1,0 +1,24 @@
+input[type=button] {
+	background-color:black;
+	color:lightgreen;
+	border-radius:0;
+	
+
+}
+
+input[type=text] {
+	font-family:'courier new';
+	background-color:black;
+	color:lightgreen;
+}
+body {
+	font-family:'courier new';
+	background-color:black;
+	color:lightgreen;
+}
+canvas {
+	border:1px solid red;
+}
+input[type=range]{
+	width:300px;
+}

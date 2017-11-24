@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel=stylesheet type='text/css' href='css/style.css' />
+	<script src="bang-bang.js" ></script>
+</head>
+<body onload="init()">
+	<table>
+		<tr>
+			<td>
+				<canvas width=400 height=400 id=canvas></canvas>
+			</td>
+			<td>
+				<div id=turn></div>
+				Speed:<br/>
+				<input type=range min=15 max=1000 value=50 id=v0  onchange='replicate(this.value, "v0_text")' >
+				<input type=text size=3 id=v0_text value=50  onchange='replicate(this.value, "v0")' />
+				<br/>
+				Angle:<br/>
+				<input type=range min=0 max=90 value=45 id=angle  onchange='replicate(this.value, "angle_text")' >
+				<input type=text size=3 id=angle_text value=45 onchange='replicate(this.value, "angle")'/>
+				<br/>
+				<input type=button onclick='fire()' value='Fire!' />
+			</td>
+		</tr>
+	</table>
+	<div style="display:none">
+		<img src='./bg/bg.png' id=bg alt="" />
+		<img src='./img/32.png' id=cannon_l alt="" />
+		<img src='./img/32a.png' id=cannon_r alt="" />
+		<img src='./img/bullet20.png' id=bullet alt="" />
+	</div>
+</body>
+
+</html>
