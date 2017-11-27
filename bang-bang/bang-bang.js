@@ -59,7 +59,7 @@ function calculate_bullet_location(){
 	var elapsed = get_time_elapsed();
 
 	bullet.x = players[current_player].x + (elapsed * get_user_initial_speed() * Math.cos(get_user_angle())) * get_direction();
-	bullet.y = players[current_player].y + (elapsed * get_user_initial_speed() * Math.sin(get_user_angle())) - Math.pow(gravity()/2 * elapsed,2);
+	bullet.y = players[current_player].y + (elapsed * get_user_initial_speed() * Math.sin(get_user_angle())) - Math.pow(gravity() * elapsed,2)/2;
 	console.log(Math.round(elapsed,2) + ":" + Math.round(bullet.x,2) + "\t" + Math.round(bullet.y,2));
 }
 function deg2rad(deg){
