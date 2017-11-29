@@ -1,0 +1,65 @@
+/** https://color.adobe.com/Corporate-Orange-Blue-color-theme-10202450/edit/?copy=true&base=1&rule=Custom&selected=2&name=Copy%20of%20Corporate%20Orange%20%20Blue&mode=rgb&rgbvalues=0.18823529411764706,0.25882352941176473,0.4117647058823529,0.5686274509803921,0.7450980392156863,0.8313725490196079,0.8509803921568627,0.9098039215686274,0.9607843137254902,1,1,1,0.9490196078431372,0.3803921568627451,0.00392156862745098&swatchOrder=0,1,2,3,4 */
+body {
+	padding:0;
+	margin:0;
+}
+form {
+	margin:0;
+}
+.registration-form h2 {
+	font-size:32pt;
+	text-align:center;
+}
+.registration-form {
+	border-radius:5px;
+	
+	background-color:#D9E8F5;
+	color:#304269;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 2vw;
+	padding: 1vw;
+	box-sizing: border-box;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	font-family: 'Open Sans', Helvetica, arial, sans-serif;
+
+}
+.form_block {
+	display:block;
+	margin-top:3vw;
+}
+.reg-input {
+	border:1px solid #304269;
+	font-family: 'Open Sans', Helvetica, arial, sans-serif;
+	font-size:16pt;
+	width:100%;
+	box-sizing:border-box;
+	border-radius:3px;
+	
+}
+.reg-ok:hover {
+	background-color:#304269;
+	color:white;
+}
+label {
+	font-weight:bold;
+	font-size:14pt;
+}
+.reg-ok {
+	font-size:24pt;
+	border: 2px solid #304269;
+	font-weight:900;
+	border-radius:3px;
+    -webkit-appearance: none;
+	
+}
+
+@media only screen and (max-width: 900px) {
+    .registration-form {
+        margin: 0;
+	width:100%;
+	padding-bottom:120px;
+    }
+}
+
