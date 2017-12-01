@@ -1,0 +1,125 @@
+\hypertarget{crear_alerta_8php}{}\section{crear\+Alerta.\+php File Reference}
+\label{crear_alerta_8php}\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{crear_alerta_8php_ac67f04ebdc4f44ec9102c15a0ea745fd}{\$filter\+\_\+fields} = \hyperlink{dict_8php_a06bc942ddeb3d0d20410b67298781449}{dict}(\char`\"{}filter\char`\"{})
+\item 
+\hyperlink{crear_alerta_8php_a711797613cb863ca0756df789c396bf2}{\$host} = \textquotesingle{}127.\+0.\+0.\+1\textquotesingle{}
+\item 
+\hyperlink{crear_alerta_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db} = \textquotesingle{}marketplace\textquotesingle{}
+\item 
+\hyperlink{crear_alerta_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user} = \textquotesingle{}root\textquotesingle{}
+\item 
+\hyperlink{crear_alerta_8php_a12ec2780b52bd1c54d38c2f981c0349f}{\$pass} = \textquotesingle{}\textquotesingle{}
+\item 
+\hyperlink{crear_alerta_8php_af10158dd74b75f1d337e83102d6b82ce}{\$charset} = \textquotesingle{}utf8mb4\textquotesingle{}
+\item 
+\hyperlink{crear_alerta_8php_a6441cca8c9fa11e16d2017e8cb733c10}{\$dsn} = \char`\"{}mysql\+:host=\$host;dbname=\$db;charset=\$charset\char`\"{}
+\item 
+\hyperlink{crear_alerta_8php_a7fef1cb364d4fb76ac905a9b9fa60c68}{\$opt}
+\item 
+\hyperlink{crear_alerta_8php_a5766efd703cef0e00bfc06b3f3acbe0e}{\$pdo} = new P\+DO(\$dsn, \$user, \$pass, \$opt)
+\item 
+\hyperlink{crear_alerta_8php_ad634f418b20382e2802f80532d76d3cd}{\$email} = \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}email\textquotesingle{}\mbox{]}
+\item 
+\hyperlink{crear_alerta_8php_a9063938de963da33209dd9353fdc768f}{\$conditions} = array()
+\item 
+\hyperlink{lista_ofertas_8php_ac5fb0d39759ff645b2b7df05daca83eb}{foreach}(\$filter\+\_\+fields as \$field\+\_\+name=$>$ \$field) \hyperlink{crear_alerta_8php_abfa9406378a774b140463b5b09d1ce54}{\$query} = implode(\char`\"{} A\+ND \char`\"{}, \$conditions)
+\item 
+\hyperlink{crear_alerta_8php_a047170d6020a882807665812a27e2525}{\$sql} = \char`\"{}I\+N\+S\+E\+RT I\+N\+TO alert V\+A\+L\+U\+ES(\textquotesingle{}0\textquotesingle{}, \textquotesingle{}\$email\textquotesingle{}, \textquotesingle{}\$query\textquotesingle{})\char`\"{}
+\item 
+\hyperlink{crear_alerta_8php_af27a9140d5f2658693e7fd107f716449}{\$stmt} = \$pdo-\/$>$prepare(\$sql)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{crear_alerta_8php_af10158dd74b75f1d337e83102d6b82ce}{}\label{crear_alerta_8php_af10158dd74b75f1d337e83102d6b82ce} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$charset@{\$charset}}
+\index{\$charset@{\$charset}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$charset}{$charset}}
+{\footnotesize\ttfamily \$charset = \textquotesingle{}utf8mb4\textquotesingle{}}
+
+\hypertarget{crear_alerta_8php_a9063938de963da33209dd9353fdc768f}{}\label{crear_alerta_8php_a9063938de963da33209dd9353fdc768f} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$conditions@{\$conditions}}
+\index{\$conditions@{\$conditions}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$conditions}{$conditions}}
+{\footnotesize\ttfamily \$conditions = array()}
+
+\hypertarget{crear_alerta_8php_a1fa3127fc82f96b1436d871ef02be319}{}\label{crear_alerta_8php_a1fa3127fc82f96b1436d871ef02be319} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$db@{\$db}}
+\index{\$db@{\$db}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$db}{$db}}
+{\footnotesize\ttfamily \$db = \textquotesingle{}marketplace\textquotesingle{}}
+
+\hypertarget{crear_alerta_8php_a6441cca8c9fa11e16d2017e8cb733c10}{}\label{crear_alerta_8php_a6441cca8c9fa11e16d2017e8cb733c10} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$dsn@{\$dsn}}
+\index{\$dsn@{\$dsn}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$dsn}{$dsn}}
+{\footnotesize\ttfamily \$dsn = \char`\"{}mysql\+:host=\$host;dbname=\$db;charset=\$charset\char`\"{}}
+
+\hypertarget{crear_alerta_8php_ad634f418b20382e2802f80532d76d3cd}{}\label{crear_alerta_8php_ad634f418b20382e2802f80532d76d3cd} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$email@{\$email}}
+\index{\$email@{\$email}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$email}{$email}}
+{\footnotesize\ttfamily \$email = \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}email\textquotesingle{}\mbox{]}}
+
+\hypertarget{crear_alerta_8php_ac67f04ebdc4f44ec9102c15a0ea745fd}{}\label{crear_alerta_8php_ac67f04ebdc4f44ec9102c15a0ea745fd} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$filter\+\_\+fields@{\$filter\+\_\+fields}}
+\index{\$filter\+\_\+fields@{\$filter\+\_\+fields}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$filter\+\_\+fields}{$filter\_fields}}
+{\footnotesize\ttfamily \$filter\+\_\+fields = \hyperlink{dict_8php_a06bc942ddeb3d0d20410b67298781449}{dict}(\char`\"{}filter\char`\"{})}
+
+\hypertarget{crear_alerta_8php_a711797613cb863ca0756df789c396bf2}{}\label{crear_alerta_8php_a711797613cb863ca0756df789c396bf2} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$host@{\$host}}
+\index{\$host@{\$host}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$host}{$host}}
+{\footnotesize\ttfamily \$host = \textquotesingle{}127.\+0.\+0.\+1\textquotesingle{}}
+
+\hypertarget{crear_alerta_8php_a7fef1cb364d4fb76ac905a9b9fa60c68}{}\label{crear_alerta_8php_a7fef1cb364d4fb76ac905a9b9fa60c68} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$opt@{\$opt}}
+\index{\$opt@{\$opt}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$opt}{$opt}}
+{\footnotesize\ttfamily \$opt}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= [
+    PDO::ATTR\_ERRMODE            => PDO::ERRMODE\_EXCEPTION
+\end{DoxyCode}
+\hypertarget{crear_alerta_8php_a12ec2780b52bd1c54d38c2f981c0349f}{}\label{crear_alerta_8php_a12ec2780b52bd1c54d38c2f981c0349f} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$pass@{\$pass}}
+\index{\$pass@{\$pass}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$pass}{$pass}}
+{\footnotesize\ttfamily \$pass = \textquotesingle{}\textquotesingle{}}
+
+\hypertarget{crear_alerta_8php_a5766efd703cef0e00bfc06b3f3acbe0e}{}\label{crear_alerta_8php_a5766efd703cef0e00bfc06b3f3acbe0e} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$pdo@{\$pdo}}
+\index{\$pdo@{\$pdo}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$pdo}{$pdo}}
+{\footnotesize\ttfamily \$pdo = new P\+DO(\$dsn, \$user, \$pass, \$opt)}
+
+\hypertarget{crear_alerta_8php_abfa9406378a774b140463b5b09d1ce54}{}\label{crear_alerta_8php_abfa9406378a774b140463b5b09d1ce54} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$query@{\$query}}
+\index{\$query@{\$query}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$query}{$query}}
+{\footnotesize\ttfamily \hyperlink{lista_ofertas_8php_ac5fb0d39759ff645b2b7df05daca83eb}{foreach} ( \$filter\+\_\+fields as \$field\+\_\+name=$>$ \$field) \$query = implode(\char`\"{} A\+ND \char`\"{}, \$conditions)}
+
+\hypertarget{crear_alerta_8php_a047170d6020a882807665812a27e2525}{}\label{crear_alerta_8php_a047170d6020a882807665812a27e2525} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}I\+N\+S\+E\+RT I\+N\+TO alert V\+A\+L\+U\+ES(\textquotesingle{}0\textquotesingle{}, \textquotesingle{}\$email\textquotesingle{}, \textquotesingle{}\$query\textquotesingle{})\char`\"{}}
+
+\hypertarget{crear_alerta_8php_af27a9140d5f2658693e7fd107f716449}{}\label{crear_alerta_8php_af27a9140d5f2658693e7fd107f716449} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$stmt@{\$stmt}}
+\index{\$stmt@{\$stmt}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$stmt}{$stmt}}
+{\footnotesize\ttfamily \$stmt = \$pdo-\/$>$prepare(\$sql)}
+
+\hypertarget{crear_alerta_8php_a598ca4e71b15a1313ec95f0df1027ca5}{}\label{crear_alerta_8php_a598ca4e71b15a1313ec95f0df1027ca5} 
+\index{crear\+Alerta.\+php@{crear\+Alerta.\+php}!\$user@{\$user}}
+\index{\$user@{\$user}!crear\+Alerta.\+php@{crear\+Alerta.\+php}}
+\subsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \$user = \textquotesingle{}root\textquotesingle{}}
+

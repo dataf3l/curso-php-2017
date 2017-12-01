@@ -1,0 +1,147 @@
+\hypertarget{alerts_8php}{}\section{alerts.\+php File Reference}
+\label{alerts_8php}\index{alerts.\+php@{alerts.\+php}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{alerts_8php_a39cc6d68da40b461170d87a183c6d08e}{alert\+\_\+dict} ()
+\item 
+\hyperlink{alerts_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL} (\$S\+QL)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{alerts_8php_a729c521d99d919a188fcf3ce7ea8abf4}{\$tabla} = \char`\"{}alert\char`\"{}
+\item 
+\hyperlink{alerts_8php_af9497eccfad417dbeb146a552754ba58}{\$once} = 0
+\item 
+\hyperlink{alerts_8php_af10158dd74b75f1d337e83102d6b82ce}{\$charset} = \textquotesingle{}utf8mb4\textquotesingle{}
+\item 
+if(!isset(\$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}page\textquotesingle{}\mbox{]})) \hyperlink{alerts_8php_a0ac1dc775b5200ca1ce7b5e63b96a90f}{else}
+\item 
+\hyperlink{alerts_8php_a8b6b390e5bb7f76108892860e4996a29}{\$ps} = 10
+\item 
+\hyperlink{alerts_8php_aec4de82415d7f05cb9748d12d3a95a87}{\$offset} = \$ps $\ast$ \$page -\/ \$ps
+\item 
+\hyperlink{alerts_8php_af257545da465befb663591fd6fbe85ce}{\$\+S\+QL} = \char`\"{}S\+E\+L\+E\+CT count($\ast$) as c from \$tabla\char`\"{}
+\item 
+\hyperlink{alerts_8php_a1812a4caf64434b22b146b17c25560f2}{\$ds} = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\$S\+QL)
+\item 
+\hyperlink{alerts_8php_a6cb1988642ff4f03fdfb3658cdd14fa0}{\$records} = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\char`\"{}S\+E\+L\+E\+CT $\ast$ F\+R\+OM \$tabla limit 10 offset \$offset\char`\"{})
+\item 
+\hyperlink{alerts_8php_a54dfda288ab58a7bf7fb40f0ca668433}{foreach} ( \$records as \$row)
+\item 
+\hyperlink{alerts_8php_a8ac13a7cbfa3465f0b70fc4c1b23ff1a}{\$register\+\_\+count} = \$ds\mbox{[}0\mbox{]}\mbox{[}\char`\"{}c\char`\"{}\mbox{]}
+\item 
+\hyperlink{alerts_8php_af8ca4a6d8480351bd32e1b25dcbf9276}{\$page\+\_\+count} = ceil(\$register\+\_\+count / \$ps)
+\item 
+\hyperlink{alerts_8php_a8f5f30fbe4092bf20ba2fcae8197ab09}{\$ini} = max(1, \$page -\/ 5)
+\item 
+\hyperlink{alerts_8php_aca415ddf942e2a996eb5a5bdeeb7a41f}{\$fin} = min(\$page\+\_\+count, \$page $\ast$ 5)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{alerts_8php_a39cc6d68da40b461170d87a183c6d08e}{}\label{alerts_8php_a39cc6d68da40b461170d87a183c6d08e} 
+\index{alerts.\+php@{alerts.\+php}!alert\+\_\+dict@{alert\+\_\+dict}}
+\index{alert\+\_\+dict@{alert\+\_\+dict}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{alert\+\_\+dict()}{alert\_dict()}}
+{\footnotesize\ttfamily alert\+\_\+dict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{alerts_8php_a508906286211b4a6c5c393195505b870}{}\label{alerts_8php_a508906286211b4a6c5c393195505b870} 
+\index{alerts.\+php@{alerts.\+php}!run\+S\+QL@{run\+S\+QL}}
+\index{run\+S\+QL@{run\+S\+QL}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{run\+S\+Q\+L()}{runSQL()}}
+{\footnotesize\ttfamily run\+S\+QL (\begin{DoxyParamCaption}\item[{}]{\$\+S\+QL }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{alerts_8php_af10158dd74b75f1d337e83102d6b82ce}{}\label{alerts_8php_af10158dd74b75f1d337e83102d6b82ce} 
+\index{alerts.\+php@{alerts.\+php}!\$charset@{\$charset}}
+\index{\$charset@{\$charset}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$charset}{$charset}}
+{\footnotesize\ttfamily \$charset = \textquotesingle{}utf8mb4\textquotesingle{}}
+
+\hypertarget{alerts_8php_a1812a4caf64434b22b146b17c25560f2}{}\label{alerts_8php_a1812a4caf64434b22b146b17c25560f2} 
+\index{alerts.\+php@{alerts.\+php}!\$ds@{\$ds}}
+\index{\$ds@{\$ds}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$ds}{$ds}}
+{\footnotesize\ttfamily \$ds = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\$S\+QL)}
+
+\hypertarget{alerts_8php_aca415ddf942e2a996eb5a5bdeeb7a41f}{}\label{alerts_8php_aca415ddf942e2a996eb5a5bdeeb7a41f} 
+\index{alerts.\+php@{alerts.\+php}!\$fin@{\$fin}}
+\index{\$fin@{\$fin}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$fin}{$fin}}
+{\footnotesize\ttfamily \$fin = min(\$page\+\_\+count, \$page $\ast$ 5)}
+
+\hypertarget{alerts_8php_a8f5f30fbe4092bf20ba2fcae8197ab09}{}\label{alerts_8php_a8f5f30fbe4092bf20ba2fcae8197ab09} 
+\index{alerts.\+php@{alerts.\+php}!\$ini@{\$ini}}
+\index{\$ini@{\$ini}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$ini}{$ini}}
+{\footnotesize\ttfamily \$ini = max(1, \$page -\/ 5)}
+
+\hypertarget{alerts_8php_aec4de82415d7f05cb9748d12d3a95a87}{}\label{alerts_8php_aec4de82415d7f05cb9748d12d3a95a87} 
+\index{alerts.\+php@{alerts.\+php}!\$offset@{\$offset}}
+\index{\$offset@{\$offset}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$offset}{$offset}}
+{\footnotesize\ttfamily \$offset = \$ps $\ast$ \$page -\/ \$ps}
+
+\hypertarget{alerts_8php_af9497eccfad417dbeb146a552754ba58}{}\label{alerts_8php_af9497eccfad417dbeb146a552754ba58} 
+\index{alerts.\+php@{alerts.\+php}!\$once@{\$once}}
+\index{\$once@{\$once}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$once}{$once}}
+{\footnotesize\ttfamily \$once = 0}
+
+\hypertarget{alerts_8php_af8ca4a6d8480351bd32e1b25dcbf9276}{}\label{alerts_8php_af8ca4a6d8480351bd32e1b25dcbf9276} 
+\index{alerts.\+php@{alerts.\+php}!\$page\+\_\+count@{\$page\+\_\+count}}
+\index{\$page\+\_\+count@{\$page\+\_\+count}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$page\+\_\+count}{$page\_count}}
+{\footnotesize\ttfamily \$page\+\_\+count = ceil(\$register\+\_\+count / \$ps)}
+
+\hypertarget{alerts_8php_a8b6b390e5bb7f76108892860e4996a29}{}\label{alerts_8php_a8b6b390e5bb7f76108892860e4996a29} 
+\index{alerts.\+php@{alerts.\+php}!\$ps@{\$ps}}
+\index{\$ps@{\$ps}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$ps}{$ps}}
+{\footnotesize\ttfamily \$ps = 10}
+
+\hypertarget{alerts_8php_a6cb1988642ff4f03fdfb3658cdd14fa0}{}\label{alerts_8php_a6cb1988642ff4f03fdfb3658cdd14fa0} 
+\index{alerts.\+php@{alerts.\+php}!\$records@{\$records}}
+\index{\$records@{\$records}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$records}{$records}}
+{\footnotesize\ttfamily \$records = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\char`\"{}S\+E\+L\+E\+CT $\ast$ F\+R\+OM \$tabla limit 10 offset \$offset\char`\"{})}
+
+\hypertarget{alerts_8php_a8ac13a7cbfa3465f0b70fc4c1b23ff1a}{}\label{alerts_8php_a8ac13a7cbfa3465f0b70fc4c1b23ff1a} 
+\index{alerts.\+php@{alerts.\+php}!\$register\+\_\+count@{\$register\+\_\+count}}
+\index{\$register\+\_\+count@{\$register\+\_\+count}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$register\+\_\+count}{$register\_count}}
+{\footnotesize\ttfamily \$register\+\_\+count = \$ds\mbox{[}0\mbox{]}\mbox{[}\char`\"{}c\char`\"{}\mbox{]}}
+
+\hypertarget{alerts_8php_af257545da465befb663591fd6fbe85ce}{}\label{alerts_8php_af257545da465befb663591fd6fbe85ce} 
+\index{alerts.\+php@{alerts.\+php}!\$\+S\+QL@{\$\+S\+QL}}
+\index{\$\+S\+QL@{\$\+S\+QL}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$\+S\+QL}{$SQL}}
+{\footnotesize\ttfamily \$S\+QL = \char`\"{}S\+E\+L\+E\+CT count($\ast$) as c from \$tabla\char`\"{}}
+
+\hypertarget{alerts_8php_a729c521d99d919a188fcf3ce7ea8abf4}{}\label{alerts_8php_a729c521d99d919a188fcf3ce7ea8abf4} 
+\index{alerts.\+php@{alerts.\+php}!\$tabla@{\$tabla}}
+\index{\$tabla@{\$tabla}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{\$tabla}{$tabla}}
+{\footnotesize\ttfamily \$tabla = \char`\"{}alert\char`\"{}}
+
+\hypertarget{alerts_8php_a0ac1dc775b5200ca1ce7b5e63b96a90f}{}\label{alerts_8php_a0ac1dc775b5200ca1ce7b5e63b96a90f} 
+\index{alerts.\+php@{alerts.\+php}!else@{else}}
+\index{else@{else}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if (!isset( \$\+\_\+\+G\+ET\mbox{[} \textquotesingle{}page\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $page = (int) $\_GET[\textcolor{stringliteral}{'page'}]
+\end{DoxyCode}
+\hypertarget{alerts_8php_a54dfda288ab58a7bf7fb40f0ca668433}{}\label{alerts_8php_a54dfda288ab58a7bf7fb40f0ca668433} 
+\index{alerts.\+php@{alerts.\+php}!foreach@{foreach}}
+\index{foreach@{foreach}!alerts.\+php@{alerts.\+php}}
+\subsubsection{\texorpdfstring{foreach}{foreach}}
+{\footnotesize\ttfamily foreach(\$records as \$row)}
+

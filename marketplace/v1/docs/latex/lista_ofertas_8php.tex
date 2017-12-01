@@ -1,0 +1,125 @@
+\hypertarget{lista_ofertas_8php}{}\section{lista\+Ofertas.\+php File Reference}
+\label{lista_ofertas_8php}\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lista_ofertas_8php_ab2303c817e3b402b77b7f99627b9c319}{\$fields} = \hyperlink{dict_8php_a06bc942ddeb3d0d20410b67298781449}{dict}()
+\item 
+\hyperlink{lista_ofertas_8php_a729c521d99d919a188fcf3ce7ea8abf4}{\$tabla} = \hyperlink{conf_8php_aa6ab823c47bed35ec59f141ad6ae9dd5}{get\+\_\+table\+\_\+name}()
+\item 
+\hyperlink{lista_ofertas_8php_af9497eccfad417dbeb146a552754ba58}{\$once} = 0
+\item 
+if(!isset(\$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}page\textquotesingle{}\mbox{]})) \hyperlink{lista_ofertas_8php_a0ac1dc775b5200ca1ce7b5e63b96a90f}{else}
+\item 
+\hyperlink{lista_ofertas_8php_a8b6b390e5bb7f76108892860e4996a29}{\$ps} = 10
+\item 
+\hyperlink{lista_ofertas_8php_aec4de82415d7f05cb9748d12d3a95a87}{\$offset} = \$ps $\ast$ \$page -\/ \$ps
+\item 
+\hyperlink{lista_ofertas_8php_af257545da465befb663591fd6fbe85ce}{\$\+S\+QL} = \char`\"{}S\+E\+L\+E\+CT count($\ast$) as c from \$tabla\char`\"{}
+\item 
+\hyperlink{lista_ofertas_8php_a1812a4caf64434b22b146b17c25560f2}{\$ds} = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\$S\+QL)
+\item 
+\hyperlink{lista_ofertas_8php_a6cb1988642ff4f03fdfb3658cdd14fa0}{\$records} = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\char`\"{}S\+E\+L\+E\+CT $\ast$ F\+R\+OM \$tabla limit 10 offset \$offset\char`\"{})
+\item 
+\hyperlink{lista_ofertas_8php_ac5fb0d39759ff645b2b7df05daca83eb}{foreach} ( \$records as \$row)
+\item 
+\hyperlink{lista_ofertas_8php_a8ac13a7cbfa3465f0b70fc4c1b23ff1a}{\$register\+\_\+count} = \$ds\mbox{[}0\mbox{]}\mbox{[}\char`\"{}c\char`\"{}\mbox{]}
+\item 
+\hyperlink{lista_ofertas_8php_af8ca4a6d8480351bd32e1b25dcbf9276}{\$page\+\_\+count} = ceil(\$register\+\_\+count / \$ps)
+\item 
+\hyperlink{lista_ofertas_8php_a8f5f30fbe4092bf20ba2fcae8197ab09}{\$ini} = max(1, \$page -\/ 5)
+\item 
+\hyperlink{lista_ofertas_8php_aca415ddf942e2a996eb5a5bdeeb7a41f}{\$fin} = min(\$page\+\_\+count, \$page $\ast$ 5)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{lista_ofertas_8php_a1812a4caf64434b22b146b17c25560f2}{}\label{lista_ofertas_8php_a1812a4caf64434b22b146b17c25560f2} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$ds@{\$ds}}
+\index{\$ds@{\$ds}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$ds}{$ds}}
+{\footnotesize\ttfamily \$ds = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\$S\+QL)}
+
+\hypertarget{lista_ofertas_8php_ab2303c817e3b402b77b7f99627b9c319}{}\label{lista_ofertas_8php_ab2303c817e3b402b77b7f99627b9c319} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$fields@{\$fields}}
+\index{\$fields@{\$fields}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$fields}{$fields}}
+{\footnotesize\ttfamily \$fields = \hyperlink{dict_8php_a06bc942ddeb3d0d20410b67298781449}{dict}()}
+
+\hypertarget{lista_ofertas_8php_aca415ddf942e2a996eb5a5bdeeb7a41f}{}\label{lista_ofertas_8php_aca415ddf942e2a996eb5a5bdeeb7a41f} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$fin@{\$fin}}
+\index{\$fin@{\$fin}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$fin}{$fin}}
+{\footnotesize\ttfamily \$fin = min(\$page\+\_\+count, \$page $\ast$ 5)}
+
+\hypertarget{lista_ofertas_8php_a8f5f30fbe4092bf20ba2fcae8197ab09}{}\label{lista_ofertas_8php_a8f5f30fbe4092bf20ba2fcae8197ab09} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$ini@{\$ini}}
+\index{\$ini@{\$ini}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$ini}{$ini}}
+{\footnotesize\ttfamily \$ini = max(1, \$page -\/ 5)}
+
+\hypertarget{lista_ofertas_8php_aec4de82415d7f05cb9748d12d3a95a87}{}\label{lista_ofertas_8php_aec4de82415d7f05cb9748d12d3a95a87} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$offset@{\$offset}}
+\index{\$offset@{\$offset}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$offset}{$offset}}
+{\footnotesize\ttfamily \$offset = \$ps $\ast$ \$page -\/ \$ps}
+
+\hypertarget{lista_ofertas_8php_af9497eccfad417dbeb146a552754ba58}{}\label{lista_ofertas_8php_af9497eccfad417dbeb146a552754ba58} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$once@{\$once}}
+\index{\$once@{\$once}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$once}{$once}}
+{\footnotesize\ttfamily \$once = 0}
+
+\hypertarget{lista_ofertas_8php_af8ca4a6d8480351bd32e1b25dcbf9276}{}\label{lista_ofertas_8php_af8ca4a6d8480351bd32e1b25dcbf9276} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$page\+\_\+count@{\$page\+\_\+count}}
+\index{\$page\+\_\+count@{\$page\+\_\+count}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$page\+\_\+count}{$page\_count}}
+{\footnotesize\ttfamily \$page\+\_\+count = ceil(\$register\+\_\+count / \$ps)}
+
+\hypertarget{lista_ofertas_8php_a8b6b390e5bb7f76108892860e4996a29}{}\label{lista_ofertas_8php_a8b6b390e5bb7f76108892860e4996a29} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$ps@{\$ps}}
+\index{\$ps@{\$ps}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$ps}{$ps}}
+{\footnotesize\ttfamily \$ps = 10}
+
+\hypertarget{lista_ofertas_8php_a6cb1988642ff4f03fdfb3658cdd14fa0}{}\label{lista_ofertas_8php_a6cb1988642ff4f03fdfb3658cdd14fa0} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$records@{\$records}}
+\index{\$records@{\$records}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$records}{$records}}
+{\footnotesize\ttfamily \$records = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\char`\"{}S\+E\+L\+E\+CT $\ast$ F\+R\+OM \$tabla limit 10 offset \$offset\char`\"{})}
+
+\hypertarget{lista_ofertas_8php_a8ac13a7cbfa3465f0b70fc4c1b23ff1a}{}\label{lista_ofertas_8php_a8ac13a7cbfa3465f0b70fc4c1b23ff1a} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$register\+\_\+count@{\$register\+\_\+count}}
+\index{\$register\+\_\+count@{\$register\+\_\+count}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$register\+\_\+count}{$register\_count}}
+{\footnotesize\ttfamily \$register\+\_\+count = \$ds\mbox{[}0\mbox{]}\mbox{[}\char`\"{}c\char`\"{}\mbox{]}}
+
+\hypertarget{lista_ofertas_8php_af257545da465befb663591fd6fbe85ce}{}\label{lista_ofertas_8php_af257545da465befb663591fd6fbe85ce} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$\+S\+QL@{\$\+S\+QL}}
+\index{\$\+S\+QL@{\$\+S\+QL}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$\+S\+QL}{$SQL}}
+{\footnotesize\ttfamily \$S\+QL = \char`\"{}S\+E\+L\+E\+CT count($\ast$) as c from \$tabla\char`\"{}}
+
+\hypertarget{lista_ofertas_8php_a729c521d99d919a188fcf3ce7ea8abf4}{}\label{lista_ofertas_8php_a729c521d99d919a188fcf3ce7ea8abf4} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!\$tabla@{\$tabla}}
+\index{\$tabla@{\$tabla}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{\$tabla}{$tabla}}
+{\footnotesize\ttfamily \$tabla = \hyperlink{conf_8php_aa6ab823c47bed35ec59f141ad6ae9dd5}{get\+\_\+table\+\_\+name}()}
+
+\hypertarget{lista_ofertas_8php_a0ac1dc775b5200ca1ce7b5e63b96a90f}{}\label{lista_ofertas_8php_a0ac1dc775b5200ca1ce7b5e63b96a90f} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!else@{else}}
+\index{else@{else}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if (!isset( \$\+\_\+\+G\+ET\mbox{[} \textquotesingle{}page\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    $page = (int) $\_GET[\textcolor{stringliteral}{'page'}]
+\end{DoxyCode}
+\hypertarget{lista_ofertas_8php_ac5fb0d39759ff645b2b7df05daca83eb}{}\label{lista_ofertas_8php_ac5fb0d39759ff645b2b7df05daca83eb} 
+\index{lista\+Ofertas.\+php@{lista\+Ofertas.\+php}!foreach@{foreach}}
+\index{foreach@{foreach}!lista\+Ofertas.\+php@{lista\+Ofertas.\+php}}
+\subsubsection{\texorpdfstring{foreach}{foreach}}
+{\footnotesize\ttfamily foreach(range(\$ini, \$fin) as \$p)}
+

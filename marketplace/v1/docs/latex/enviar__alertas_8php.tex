@@ -1,0 +1,54 @@
+\hypertarget{enviar__alertas_8php}{}\section{enviar\+\_\+alertas.\+php File Reference}
+\label{enviar__alertas_8php}\index{enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{enviar__alertas_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL} (\$S\+QL)
+\item 
+\hyperlink{lista_ofertas_8php_ac5fb0d39759ff645b2b7df05daca83eb}{foreach}(\$a as \$alert) \hyperlink{enviar__alertas_8php_afea96bc9f172c253a8d9e258c7298c33}{mail\+\_\+contents} (\$records)
+\item 
+\hyperlink{enviar__alertas_8php_a5a6b091d97e3846aeb1b6fe205d1f3f4}{send} (\$c, \$m)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{enviar__alertas_8php_a9cdc3f8485a8f697cc1a94e01e815794}{\$fecha} = date(\textquotesingle{}Y-\/m-\/d\textquotesingle{})
+\item 
+\hyperlink{enviar__alertas_8php_acebf83966ef6d7e5645a6b62ba368f9f}{\$a} = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\char`\"{}S\+E\+L\+E\+CT $\ast$ from alert\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{enviar__alertas_8php_afea96bc9f172c253a8d9e258c7298c33}{}\label{enviar__alertas_8php_afea96bc9f172c253a8d9e258c7298c33} 
+\index{enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}!mail\+\_\+contents@{mail\+\_\+contents}}
+\index{mail\+\_\+contents@{mail\+\_\+contents}!enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}}
+\subsubsection{\texorpdfstring{mail\+\_\+contents()}{mail\_contents()}}
+{\footnotesize\ttfamily \hyperlink{lista_ofertas_8php_ac5fb0d39759ff645b2b7df05daca83eb}{foreach} ( \$a as \$alert) mail\+\_\+contents (\begin{DoxyParamCaption}\item[{}]{\$records }\end{DoxyParamCaption})}
+
+\hypertarget{enviar__alertas_8php_a508906286211b4a6c5c393195505b870}{}\label{enviar__alertas_8php_a508906286211b4a6c5c393195505b870} 
+\index{enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}!run\+S\+QL@{run\+S\+QL}}
+\index{run\+S\+QL@{run\+S\+QL}!enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}}
+\subsubsection{\texorpdfstring{run\+S\+Q\+L()}{runSQL()}}
+{\footnotesize\ttfamily run\+S\+QL (\begin{DoxyParamCaption}\item[{}]{\$\+S\+QL }\end{DoxyParamCaption})}
+
+\hypertarget{enviar__alertas_8php_a5a6b091d97e3846aeb1b6fe205d1f3f4}{}\label{enviar__alertas_8php_a5a6b091d97e3846aeb1b6fe205d1f3f4} 
+\index{enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}!send@{send}}
+\index{send@{send}!enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}\item[{}]{\$c,  }\item[{}]{\$m }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{enviar__alertas_8php_acebf83966ef6d7e5645a6b62ba368f9f}{}\label{enviar__alertas_8php_acebf83966ef6d7e5645a6b62ba368f9f} 
+\index{enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}!\$a@{\$a}}
+\index{\$a@{\$a}!enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}}
+\subsubsection{\texorpdfstring{\$a}{$a}}
+{\footnotesize\ttfamily \$a = \hyperlink{run__sql_8php_a508906286211b4a6c5c393195505b870}{run\+S\+QL}(\char`\"{}S\+E\+L\+E\+CT $\ast$ from alert\char`\"{})}
+
+\hypertarget{enviar__alertas_8php_a9cdc3f8485a8f697cc1a94e01e815794}{}\label{enviar__alertas_8php_a9cdc3f8485a8f697cc1a94e01e815794} 
+\index{enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}!\$fecha@{\$fecha}}
+\index{\$fecha@{\$fecha}!enviar\+\_\+alertas.\+php@{enviar\+\_\+alertas.\+php}}
+\subsubsection{\texorpdfstring{\$fecha}{$fecha}}
+{\footnotesize\ttfamily \$fecha = date(\textquotesingle{}Y-\/m-\/d\textquotesingle{})}
+
